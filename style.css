@@ -10,9 +10,11 @@ body {
 
 h1 {
   color: rgb(83, 49, 156);
+  margin: 2rem 0 2rem 0;
 }
 .container {
   background-color: #fff;
+  box-sizing: border-box;
   width: 100%;
   max-width: 56.25rem;
   border-radius: 1.2rem;
@@ -20,7 +22,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 3rem;
   position: relative;
 }
 header {
@@ -132,4 +134,136 @@ header {
 .description {
   line-height: 2rem;
   margin: 1rem 0 2rem 0;
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+  margin: 0 0 1rem 0;
+}
+
+.slider .bar {
+  width: 100%;
+  height: 1rem;
+  background-color: rgb(248, 248, 248);
+  border-radius: 20px;
+  border: 1px solid rgb(210, 210, 210);
+}
+
+.slider .progress {
+  width: 41%;
+  height: 1.12rem;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(53, 10, 74, 1) 36%,
+    rgba(83, 49, 159, 1) 100%
+  );
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: absolute;
+  top: 0;
+}
+
+.slider .point {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgb(83, 49, 156);
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  top: -5px;
+  left: 39%;
+  transition: transform 0.15s ease;
+}
+
+.slider .point:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.scale {
+  width: 100%;
+}
+.scale ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  font-weight: 700;
+  color: rgb(166, 166, 166);
+}
+.card-wrapper {
+  display: flex;
+}
+.card {
+  background-color: rgb(250, 247, 255);
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: 700;
+  color: rgb(83, 49, 156);
+  transition: transform 0.15s ease;
+}
+
+.card .top-section {
+  padding: 0.4rem;
+  text-transform: uppercase;
+}
+
+.card .top-section p {
+  margin: 0.2rem 0;
+}
+
+.card .price {
+  font-size: 2rem;
+  color: rgb(44, 44, 44);
+}
+
+.card hr {
+  width: 30%;
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 2px;
+}
+
+.card button {
+  border: none;
+  background-color: rgb(83, 49, 156);
+  border-radius: 10px;
+  color: #fff;
+  padding: 1rem;
+  font-weight: 700;
+  transition: transform 0.15s ease;
+  margin: 0.2rem 0;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.card:last-of-type {
+  position: relative;
+}
+
+.card .save {
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(53, 10, 74, 1) 36%,
+    rgba(83, 49, 159, 1) 100%
+  );
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
 }
