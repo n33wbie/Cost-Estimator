@@ -41,6 +41,9 @@ header {
   text-transform: uppercase;
   font-weight: 700;
 }
+.active {
+  position: relative;
+}
 .nav-item a.active {
   color: rgb(83, 49, 156);
 }
@@ -55,4 +58,78 @@ header {
   background-color: rgb(231, 231, 231);
   position: absolute;
   top: 5rem;
+}
+.nav-item .active::before {
+  content: "";
+  width: 200%;
+  height: 4px;
+  background-color: rgb(83, 49, 156);
+  border-radius: 10px;
+  position: absolute;
+  bottom: -1.4rem;
+  left: -50%;
+  z-index: 1;
+}
+
+.toggle-wrapper {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.toggle-wrapper img {
+  height: 2.5rem;
+  margin: 0 1rem;
+}
+
+.toggle {
+  background-color: rgb(83, 49, 156);
+  height: 2rem;
+  width: 8.75rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.2rem 0 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.75rem;
+  box-sizing: border-box;
+}
+
+.toggle span:first-of-type {
+  color: #fff;
+}
+
+.toggle span:last-of-type {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 0.2rem 1rem;
+}
+
+.sessions-card {
+  background-color: rgb(250, 247, 255);
+  text-align: center;
+  padding: 2rem;
+  width: 50%;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  border-radius: 10px;
+}
+
+.sessions-card p {
+  color: rgb(44, 44, 44);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 1rem 0 0 0;
+}
+
+.sessions-card .number {
+  color: rgb(84, 49, 156);
+  font-size: 3.37rem;
+  margin: 0;
+}
+
+.description {
+  line-height: 2rem;
+  margin: 1rem 0 2rem 0;
 }
